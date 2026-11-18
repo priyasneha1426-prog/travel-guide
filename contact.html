@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us - Travel Guide</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f0f4f8;
+            margin: 30px;
+        }
+
+        h1, h2 {
+            color: darkblue;
+            text-align: center;
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px;
+        }
+
+        nav a {
+            margin: 10px;
+            text-decoration: none;
+            color: darkblue;
+        }
+
+        form {
+            background-color: white;
+            width: 50%;
+            margin: auto;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        input, select, textarea {
+            width: 95%;
+            padding: 10px;
+            margin-top: 8px;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            width: 45%;
+            background-color: darkblue;
+            color: white;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+        }
+
+        #success {
+            color: green;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .contact-info {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Contact Us</h1>
+
+    <p align="center">
+        Have questions or need help planning your trip?
+        We would love to hear from you!
+    </p>
+
+   <nav>
+    <a href="index.html">Home</a>
+    <a href="destinations.html">World Destinations</a>
+    <a href="india.html">India</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="packages.html">Tour Packages</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+    <hr>
+
+    <h2>Send Us a Message</h2>
+
+    <form id="contactForm">
+
+        <label>Full Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <br><br>
+
+        <label>Email Address:</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <br><br>
+
+        <label>Phone Number:</label>
+        <input type="tel" id="phone" placeholder="Enter 10-digit phone number"
+        pattern="[0-9]{10}" required>
+
+        <br><br>
+
+        <label>Subject:</label>
+        <input type="text" id="subject" placeholder="Enter subject" required>
+
+        <br><br>
+
+        <label>Choose Destination:</label>
+
+        <select id="destination">
+            <option value="">Select a destination</option>
+            <option>Paris</option>
+            <option>Switzerland</option>
+            <option>New York</option>
+            <option>Japan</option>
+            <option>Maldives</option>
+            <option>Hampi</option>
+            <option>Goa</option>
+            <option>Kerala</option>
+            <option>Kashmir</option>
+            <option>Other</option>
+        </select>
+
+        <br><br>
+
+        <label>Your Message:</label>
+        <textarea id="message" rows="6"
+        placeholder="Write your message here..." required></textarea>
+
+        <br><br>
+
+        <input type="submit" value="Send Message">
+        <input type="reset" value="Clear">
+
+        <p id="success"></p>
+
+    </form>
+
+    <hr>
+
+    <h2>Our Contact Information</h2>
+
+    <div class="contact-info">
+        <p>Email: travelguide@example.com</p>
+        <p>Phone: +91 98765 43210</p>
+        <p>Address: Bengaluru, Karnataka, India</p>
+    </div>
+
+    <h3 align="center">Thank You for Visiting Travel Guide!</h3>
+
+    <script>
+
+        const form = document.getElementById("contactForm");
+
+        form.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let phone = document.getElementById("phone").value.trim();
+            let subject = document.getElementById("subject").value.trim();
+            let message = document.getElementById("message").value.trim();
+
+            if (name === "" || email === "" ||
+                phone === "" || subject === "" || message === "") {
+
+                alert("Please fill in all required fields.");
+                return;
+            }
+
+            if (!/^[0-9]{10}$/.test(phone)) {
+                alert("Please enter a valid 10-digit phone number.");
+                return;
+            }
+
+            document.getElementById("success").textContent =
+                "Thank you, " + name + "! Your form passed validation.";
+
+            form.reset();
+
+        });
+
+        form.addEventListener("reset", function() {
+            document.getElementById("success").textContent = "";
+        });
+
+    </script>
+
+</body>
+</html>

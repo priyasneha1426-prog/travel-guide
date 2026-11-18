@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Packages | Travel Guide</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <h1>Explore Our Tour Packages</h1>
+    <p>Discover amazing destinations with carefully planned trips.</p>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="destinations.html">World Destinations</a>
+        <a href="india.html">India</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="packages.html">Tour Packages</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <section class="intro">
+        <h2>Find Your Perfect Holiday</h2>
+        <p>
+            Explore our travel packages with destination details,
+            trip duration, estimated prices, accommodation,
+            transportation and day-wise itineraries.
+        </p>
+    </section>
+
+    <section class="filter-section">
+        <h2>Find a Package</h2>
+
+        <label for="category">Choose Region:</label>
+
+        <select id="category" onchange="filterPackages()">
+            <option value="all">All Packages</option>
+            <option value="india">India</option>
+            <option value="international">International</option>
+        </select>
+    </section>
+
+    <section id="packageList">
+
+        <!-- HAMPI PACKAGE -->
+
+        <article class="package-card" data-category="india">
+            <img src="images/hampi.jpg" alt="Hampi heritage landscape">
+
+            <div class="package-content">
+                <h2>1. Hampi Heritage Tour</h2>
+
+                <p><b>Destination:</b> Hampi, Karnataka</p>
+                <p><b>Duration:</b> 3 Days / 2 Nights</p>
+                <p><b>Starting Point:</b> Bengaluru</p>
+                <p><b>Estimated Cost:</b> ₹5,999 per person</p>
+                <p><b>Best Time:</b> October to February</p>
+
+                <h3>Places Covered</h3>
+                <ul>
+                    <li>Virupaksha Temple</li>
+                    <li>Vijaya Vittala Temple</li>
+                    <li>Stone Chariot</li>
+                    <li>Lotus Mahal</li>
+                    <li>Hemakuta Hill</li>
+                </ul>
+
+                <h3>Day-wise Itinerary</h3>
+                <p><b>Day 1:</b> Travel from Bengaluru, hotel check-in
+                and visit Virupaksha Temple.</p>
+
+                <p><b>Day 2:</b> Explore Stone Chariot, Vittala Temple,
+                Lotus Mahal and nearby monuments.</p>
+
+                <p><b>Day 3:</b> Visit Hemakuta Hill and return to Bengaluru.</p>
+
+                <h3>Package Includes</h3>
+                <ul>
+                    <li>2 nights accommodation</li>
+                    <li>Local sightseeing</li>
+                    <li>Breakfast for 2 days</li>
+                    <li>Local tour assistance</li>
+                </ul>
+
+                <h3>Not Included</h3>
+                <ul>
+                    <li>Personal shopping</li>
+                    <li>Lunch and dinner</li>
+                    <li>Entry tickets unless specified</li>
+                    <li>Travel insurance</li>
+                </ul>
+
+                <button onclick="bookPackage('Hampi Heritage Tour', 5999)">
+                    Enquire Now
+                </button>
+            </div>
+        </article>
+
+        <!-- KERALA PACKAGE -->
+
+        <article class="package-card" data-category="india">
+            <img src="images/kerala.jpg" alt="Kerala backwaters">
+
+            <div class="package-content">
+                <h2>2. Kerala Nature Tour</h2>
+
+                <p><b>Destination:</b> Munnar and Alleppey, Kerala</p>
+                <p><b>Duration:</b> 5 Days / 4 Nights</p>
+                <p><b>Starting Point:</b> Bengaluru</p>
+                <p><b>Estimated Cost:</b> ₹12,999 per person</p>
+                <p><b>Best Time:</b> September to March</p>
+
+                <h3>Places Covered</h3>
+                <ul>
+                    <li>Munnar Tea Gardens</li>
+                    <li>Eravikulam National Park</li>
+                    <li>Mattupetty Dam</li>
+                    <li>Alleppey Backwaters</li>
+                    <li>Houseboat experience</li>
+                </ul>
+
+                <h3>Day-wise Itinerary</h3>
+                <p><b>Day 1:</b> Travel to Munnar and check into the hotel.</p>
+                <p><b>Day 2:</b> Explore tea gardens, Mattupetty Dam and viewpoints.</p>
+                <p><b>Day 3:</b> Visit Eravikulam area and travel to Alleppey.</p>
+                <p><b>Day 4:</b> Enjoy the backwaters and houseboat experience.</p>
+                <p><b>Day 5:</b> Breakfast and return journey.</p>
+
+                <h3>Package Includes</h3>
+                <ul>
+                    <li>4 nights accommodation</li>
+                    <li>Breakfast</li>
+                    <li>Local sightseeing</li>
+                    <li>One houseboat experience, subject to package confirmation</li>
+                </ul>
+
+                <h3>Not Included</h3>
+                <ul>
+                    <li>Lunch and dinner</li>
+                    <li>Personal expenses</li>
+                    <li>Optional activities</li>
+                    <li>Entry tickets unless specified</li>
+                </ul>
+
+                <button onclick="bookPackage('Kerala Nature Tour', 12999)">
+                    Enquire Now
+                </button>
+            </div>
+        </article>
+
+        <!-- RAJASTHAN PACKAGE -->
+
+        <article class="package-card" data-category="india">
+            <img src="images/rajasthan.jpg" alt="Rajasthan palace">
+
+            <div class="package-content">
+                <h2>3. Rajasthan Royal Tour</h2>
+
+                <p><b>Destination:</b> Jaipur, Jodhpur and Udaipur</p>
+                <p><b>Duration:</b> 6 Days / 5 Nights</p>
+                <p><b>Starting Point:</b> Bengaluru</p>
+                <p><b>Estimated Cost:</b> ₹17,999 per person</p>
+                <p><b>Best Time:</b> October to March</p>
+
+                <h3>Places Covered</h3>
+                <ul>
+                    <li>Hawa Mahal</li>
+                    <li>Amber Fort</li>
+                    <li>Mehrangarh Fort</li>
+                    <li>City Palace Udaipur</li>
+                    <li>Lake Pichola</li>
+                </ul>
+
+                <h3>Day-wise Itinerary</h3>
+                <p><b>Day 1:</b> Arrive in Jaipur and explore local markets.</p>
+                <p><b>Day 2:</b> Visit Amber Fort, Hawa Mahal and City Palace.</p>
+                <p><b>Day 3:</b> Travel to Jodhpur and visit Mehrangarh Fort.</p>
+                <p><b>Day 4:</b> Explore Jodhpur and travel to Udaipur.</p>
+                <p><b>Day 5:</b> Visit City Palace and Lake Pichola.</p>
+                <p><b>Day 6:</b> Breakfast and departure.</p>
+
+                <h3>Package Includes</h3>
+                <ul>
+                    <li>5 nights accommodation</li>
+                    <li>Breakfast</li>
+                    <li>Local sightseeing</li>
+                    <li>Local transportation as per itinerary</li>
+                </ul>
+
+                <h3>Not Included</h3>
+                <ul>
+                    <li>Flight or train tickets</li>
+                    <li>Lunch and dinner</li>
+                    <li>Fort entry fees unless specified</li>
+                    <li>Personal expenses</li>
+                </ul>
+
+                <button onclick="bookPackage('Rajasthan Royal Tour', 17999)">
+                    Enquire Now
+                </button>
+            </div>
+        </article>
+
+        <!-- PARIS PACKAGE -->
+
+        <article class="package-card" data-category="international">
+            <img src="images/paris.jpg" alt="Paris Eiffel Tower">
+
+            <div class="package-content">
+                <h2>4. Paris Explorer</h2>
+
+                <p><b>Destination:</b> Paris, France</p>
+                <p><b>Duration:</b> 5 Days / 4 Nights</p>
+                <p><b>Starting Point:</b> Bengaluru</p>
+                <p><b>Estimated Cost:</b> ₹75,000 per person</p>
+                <p><b>Best Time:</b> April to June and September to October</p>
+
+                <h3>Places Covered</h3>
+                <ul>
+                    <li>Eiffel Tower</li>
+                    <li>Louvre Museum</li>
+                    <li>Notre-Dame area</li>
+                    <li>Champs-Élysées</li>
+                    <li>Seine River</li>
+                </ul>
+
+                <h3>Day-wise Itinerary</h3>
+                <p><b>Day 1:</b> Arrival in Paris and hotel check-in.</p>
+                <p><b>Day 2:</b> Eiffel Tower and Seine area sightseeing.</p>
+                <p><b>Day 3:</b> Louvre Museum and city exploration.</p>
+                <p><b>Day 4:</b> Champs-Élysées and local shopping.</p>
+                <p><b>Day 5:</b> Breakfast and departure.</p>
+
+                <h3>Package Includes</h3>
+                <ul>
+                    <li>4 nights accommodation</li>
+                    <li>Breakfast</li>
+                    <li>Selected local sightseeing</li>
+                    <li>Local travel assistance</li>
+                </ul>
+
+                <h3>Not Included</h3>
+                <ul>
+                    <li>International flight tickets unless specified</li>
+                    <li>Visa and travel insurance</li>
+                    <li>Lunch and dinner</li>
+                    <li>Personal expenses</li>
+                </ul>
+
+                <button onclick="bookPackage('Paris Explorer', 75000)">
+                    Enquire Now
+                </button>
+            </div>
+        </article>
+
+    </section>
+
+    <section class="calculator">
+        <h2>Estimate Your Trip Cost</h2>
+
+        <label for="selectedPackage">Select Package:</label>
+
+        <select id="selectedPackage">
+            <option value="5999">Hampi - ₹5,999</option>
+            <option value="12999">Kerala - ₹12,999</option>
+            <option value="17999">Rajasthan - ₹17,999</option>
+            <option value="75000">Paris - ₹75,000</option>
+        </select>
+
+        <br><br>
+
+        <label for="people">Number of Travellers:</label>
+        <input type="number" id="people" min="1" max="20" value="1">
+
+        <br><br>
+
+        <button onclick="calculateCost()">Calculate Total</button>
+
+        <h3 id="totalCost">Estimated Total: ₹5,999</h3>
+        <p>Final price may change depending on travel dates and availability.</p>
+    </section>
+
+    <section class="booking-section" id="booking">
+        <h2>Tour Package Enquiry</h2>
+
+        <form id="bookingForm">
+
+            <label>Your Name:</label>
+            <input type="text" id="customerName" required>
+
+            <label>Email:</label>
+            <input type="email" id="customerEmail" required>
+
+            <label>Phone:</label>
+            <input type="tel" id="customerPhone"
+                   pattern="[0-9]{10}" placeholder="10-digit phone number" required>
+
+            <label>Package:</label>
+            <input type="text" id="packageName" readonly required>
+
+            <label>Travel Date:</label>
+            <input type="date" id="travelDate" required>
+
+            <label>Number of Travellers:</label>
+            <input type="number" id="travellers" min="1" max="20" value="1" required>
+
+            <label>Additional Requirements:</label>
+            <textarea id="requirements" rows="4"
+                      placeholder="Tell us about your requirements"></textarea>
+
+            <button type="submit">Submit Enquiry</button>
+
+            <p id="bookingMessage"></p>
+
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>Travel Guide | Explore the World, Create Memories</p>
+    <p>Package prices are illustrative estimates, not confirmed offers.</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
